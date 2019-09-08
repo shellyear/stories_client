@@ -2,7 +2,7 @@
 The client side for "Stories" web-site on React + Redux
 Website with authentication(sign in, signup), allowing user to share stories and give them a like :) 
 
-##Status: adding some features
+## Status: adding some features
 Styled components,
 responsive web,
 fully type checking,
