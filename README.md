@@ -1,2 +1,2 @@
 # stories_client
-client side for on React for MERN application  
+client side on React for MERN application  
