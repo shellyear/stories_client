@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
+import Navbar from './components/header/Navbar';
+import Main from './components/Main';
+import Share from './components/Share';
+import Footer from './components/footer/Footer';
+import PostPage from './components/article/PostPage';
+import About from './components/About';
+import Profile from './components/Profile';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-const App: React.FC = () => {
+
+const App: React.FC = (): JSX.Element => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Router>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Main} />
+            <Route exact path="/post/:id" component={PostPage} />
+            <Route exact path="/signup" component={Register} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/share" component={Share} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/profile" component={Profile} />
+          </Switch>
+          <Footer />
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
