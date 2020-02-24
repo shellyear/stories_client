@@ -23,6 +23,7 @@ const RouteContainer = () => {
         <Route exact path="/share" component={Share} />
         <Route exact path="/about" component={About} />
         <Route exact path="/profile" component={Profile} />
+        {/* <Route component={NoMatchRouteRedirect} */}
       </Switch>
       <Footer />
     </Router>

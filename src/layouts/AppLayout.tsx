@@ -6,11 +6,6 @@ const Container = styled.div`
   flex-direction: column;
   min-height: 100vh;
   background: ${({ theme }) => theme.background};
-
-  /* Sticky footer */
-  /* @media all and (max-width: 659px) {
-    margin-top: 60px;
-  } */
 `;
 
 
@@ -20,10 +15,22 @@ const AppLayout: React.FC = (props): JSX.Element => {
   return (
     <>
       <Container>
+        {/* <Media queries={{
+            small: "(max-width: 599px)",
+            medium: "(min-width: 600px) and (max-width: 1199px)",
+            large: "(min-width: 1200px)"
+          }}>
+          {matches => (
+            <Fragment>
+              {matches.small && <MobileLayout><RouteContainer></MobileLayout>}
+              {matches.medium && <DesktopLayout><RouteContainer></DesktopLayout>}
+              {matches.large && <DesktopLayout><RouteContainer></DesktopLayout>}
+            </Fragment>
+          )}
+        </Media> */}
         {/* <Header /> */}
         <main role="main">{children}</main>
         {/* <CookieNotice /> */}
-        {/* <Footer /> */}
       </Container>
     </>
   );
