@@ -1,34 +1,34 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import BaseLayout from './BaseLayout';
-import MobileLayout from './MobileLayout';
-import { LayoutContext } from 'constants/context';
+import Header from './header/Header';
 
-const Container = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  background: ${({ theme }) => theme.background};
+const Wrapper = styled.div`
+  background: #f6f6f6;
 `;
 
+const Container = styled.div`  
+  background-color: lightblue;
+  margin: 0 auto;
+  max-width: 78rem;
+  padding: 0 2.5rem;
+`;
+
+const Content = styled.div`
+  margin-top: 2rem;
+`;
 
 const AppLayout: React.FC = ({ 
   children
 }) => {
-  const { isBase, isMobile, isTablet } = useContext(LayoutContext);
   return (
-    <>
-      {isBase && 
-        <BaseLayout isTablet={isTablet}>
+    <Wrapper>
+      <Container>
+        <Header />   
+        <Content>
           {children}
-        </BaseLayout>
-      }
-
-      {isMobile &&
-        <MobileLayout>
-          {children}
-        </MobileLayout>
-      }
-    </>
+        </Content>
+      </Container>
+    </Wrapper>
   );
 };
 

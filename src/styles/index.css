@@ -1,0 +1,24 @@
+:root {
+  --main: #5D3528;
+  --header-text: #5a5a5a;
+  --white: #fff;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../static/fonts/Roboto/Roboto-Regular.ttf);
+};
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('../static/fonts/Pacifico/Pacifico-Regular.ttf');
+}
+
+html {
+  font-size: 10px;
+  font-family: Roboto;
+};
+
+body {
+  height: 100vh;
+}
